@@ -1,0 +1,140 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    padding: 16px 0;
+    border-bottom: 1px solid #1e7ce7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    color: #f5f6fa;
+    font-size: 16px;
+    background-color: rgb(22, 107, 235);
+    margin-bottom: 56px;
+}
+
+header li {
+    list-style: none;
+    padding: 16px;
+    float: left;
+}
+
+.conteudo img{
+    max-width: 300px;
+}
+
+.destaque .noticia {
+    display: flex;
+}
+
+.destaque {
+    margin-bottom: 56px;
+}
+
+.destaque .noticia img{
+    margin-right: 10px;
+}
+
+section h2 {
+    margin-bottom: 32px;
+    max-width: 1024px;
+    width: 100%;
+}
+
+.noticias{
+    display: grid;
+    grid-template-columns: repeat(4, 24.5%);
+    column-gap: 8%;
+    row-gap: 5%;
+}
+
+.noticias img {
+    width: 130px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.texto-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo {
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid blue;
+    padding-bottom: 10px;
+    color: rgb(22, 107, 235);
+}
+
+.container button {
+    background-color: rgb(22, 107, 235);
+    color: white;
+    padding: 8px 0px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .conteudo {
+        display: block
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .destaque .noticia a {
+        display: block;
+        font-size: 1em;
+    }
+    
+    .destaque .noticia img {
+        margin-right: 0px;
+    }
+
+    .noticias {
+        display: block;
+    }
+
+    .noticias .noticia{
+        margin-bottom: 32px;
+    }
+
+    aside {
+        padding-left: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .destaque .noticia a {
+        font-size: 1.5em;
+    }
+
+    .noticias {
+        grid-template-columns: repeat(2, 40%);
+    }
+}
